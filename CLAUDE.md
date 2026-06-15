@@ -1,5 +1,5 @@
 # CLAUDE.md
-This project is a personal website where I (Evgeny Chernov) share my experience working as
+This project is a personal website where I (Eugene Chernov) share my experience working as
 a machine learning and artificial intelligence engineer.
 
 It's a static site hosted on GitHub Pages (a user site published at
@@ -13,9 +13,10 @@ files at the repo root as-is.
   chips), `About`, `Experience` (company/project cards), and `footer`.
 - `styles.css` — all styling. Theming is driven by CSS custom properties on `:root`, with a
   `[data-theme="dark"]` block overriding them for dark mode. Layout is responsive/mobile-first.
-- `main.js` — small, dependency-free: dark/light theme toggle (persisted in `localStorage`,
-  honors `prefers-color-scheme` on first visit) and the auto-updating footer year. A tiny
-  inline script in `index.html`'s `<head>` sets the theme before first paint to avoid a flash.
+- `main.js` — small, dependency-free: dark/light theme toggle. On first visit the theme
+  follows the OS preference (`prefers-color-scheme`); the user's choice is then persisted in
+  `localStorage`. Also sets the footer year. A tiny inline script in `index.html`'s `<head>`
+  applies the theme before first paint to avoid a flash.
 - `.nojekyll` — tells GitHub Pages to skip Jekyll and serve files as-is.
 - `README.md` — short English repo description (also the GitHub repo landing page).
 - `refs/rus/` — the **Russian source of truth** for all site content.

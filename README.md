@@ -1,6 +1,6 @@
 # euchernov.github.io
 
-Personal website of **Evgeny Chernov** — ML / AI Engineer.
+Personal website of **Eugene Chernov** — ML / AI Engineer.
 
 A place where I share my experience working in machine learning and artificial
 intelligence: computer vision research, high-load production systems, and the projects

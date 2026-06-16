@@ -6,6 +6,7 @@
   <title>Eugene Chernov — ML / AI Engineer</title>
   <meta name="description" content="Eugene Chernov — Machine Learning &amp; AI Engineer. Experience in computer vision research and high-load production systems." />
   <meta name="author" content="Eugene Chernov" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Open Graph / social preview -->
   <meta property="og:title" content="Eugene Chernov — ML / AI Engineer" />
@@ -15,7 +16,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" />
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Set theme before first paint to avoid a flash of the wrong theme -->
@@ -39,9 +40,32 @@
           <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />
         </svg>
       </a>
-      <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-label="Menu"
+              aria-expanded="false" aria-controls="primary-nav">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropbtn" type="button" aria-haspopup="true"
+                  aria-expanded="false" aria-controls="projects-menu">
+            Projects
+            <svg class="nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <ul class="nav__menu" id="projects-menu" role="menu">
+            <li role="none"><a role="menuitem" href="#project-1">Project 1</a></li>
+            <li role="none"><a role="menuitem" href="#thesis">Accelerating 3D scene view synthesis</a></li>
+          </ul>
+        </div>
       </nav>
       <button id="theme-toggle" class="theme-toggle" type="button"
               aria-label="Switch color theme" title="Switch color theme">
@@ -63,7 +87,7 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__text">
-        <p class="hero__eyebrow">Machine Learning · Artificial Intelligence</p>
+        <p class="hero__eyebrow">Artificial Intelligence · Deep Learning · Machine Learning</p>
         <h1 class="hero__name">Eugene Chernov</h1>
         <p class="hero__role">ML / AI Engineer</p>
         <p class="hero__tagline">
@@ -79,22 +103,6 @@
                 <path d="m2 7 10 6 10-6" />
               </svg>
               <span>chernov.eu.i@gmail.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+79771761772">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              <span>+7 977 176-17-72</span>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+998507012929">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              <span>+998 50 701-29-29</span>
             </a>
           </li>
           </ul>
@@ -183,7 +191,7 @@
           </p>
 
           <!-- Project 1 (content coming soon) -->
-          <div class="project">
+          <div class="project" id="project-1">
             <div class="project__head">
               <h4 class="project__title">Project 1</h4>
               <span class="badge">Coming soon</span>
@@ -211,6 +219,100 @@
               </div>
             </dl>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section__title">Education</h2>
+        <article class="card company">
+          <header class="company__header">
+            <h3 class="company__name">Master's degree</h3>
+            <span class="company__role">Mathematics &amp; Computer Science</span>
+            <span class="company__period">2021 – 2023</span>
+          </header>
+          <p class="company__about">
+            <a href="https://mospolytech.ru/en/" target="_blank" rel="noopener noreferrer">Moscow Polytechnic University</a>
+          </p>
+
+          <div class="project" id="thesis">
+            <div class="project__head">
+              <h4 class="project__title">Accelerating 3D scene view synthesis</h4>
+            </div>
+            <p class="project__lead">
+              Master's thesis — “Synthesis of novel views of outdoor scenes from real
+              photographs using NeRF.”
+              <a href="https://drive.google.com/file/d/1tEAdmg3N4S-FZ_d2hHtUzqb5iekHrg4g/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read the thesis (PDF)</a>.
+            </p>
+            <dl class="project__fields">
+              <div class="field">
+                <dt>Context</dt>
+                <dd>
+                  Synthesizing novel views of a scene from a sparse set of images is a
+                  long-standing computer-vision problem and a prerequisite for many augmented
+                  reality (AR) and virtual reality (VR) applications. The then-popular
+                  <a href="https://arxiv.org/abs/2003.08934" target="_blank" rel="noopener noreferrer">NeRF</a>
+                  family of methods produced strong results; in particular,
+                  <a href="https://arxiv.org/abs/2008.02268" target="_blank" rel="noopener noreferrer">NeRF in the Wild (NeRF-W)</a>
+                  could handle noisy data — real photographs of outdoor scenes — but training a
+                  single scene could take a day or more.
+                </dd>
+              </div>
+              <div class="field">
+                <dt>Idea</dt>
+                <dd>
+                  Accelerate NeRF-W training using the then-new Multiresolution Hash Encoding
+                  from
+                  <a href="https://arxiv.org/abs/2201.05989" target="_blank" rel="noopener noreferrer">InstantNGP</a>.
+                </dd>
+              </div>
+              <div class="field">
+                <dt>What was done</dt>
+                <dd>
+                  Implemented a method combining NeRF-W and InstantNGP, and built custom
+                  benchmarks to evaluate the approach.
+                </dd>
+              </div>
+              <div class="field">
+                <dt>Results</dt>
+                <dd>
+                  Achieved a 100× speed-up of NeRF-W training (from 24 hours to 15 minutes)
+                  with higher quality on formal metrics. The approach was later used at my
+                  first job at
+                  <a href="https://en.wikipedia.org/wiki/Sberbank" target="_blank" rel="noopener noreferrer">Sber</a>
+                  to build 3D models of Moscow landmarks from publicly available photographs.
+                </dd>
+              </div>
+              <div class="field">
+                <dt>Technologies</dt>
+                <dd>PyTorch, tiny-cuda-nn, NeRF, NeRF-W, InstantNGP.</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Achievements</h2>
+        <article class="card company">
+          <header class="company__header">
+            <h3 class="company__name">Image moderation at Avito</h3>
+            <span class="company__role">Talk · DUMP 2026</span>
+          </header>
+          <p>
+            I gave a talk reviewing the image-moderation systems our team had built, focusing
+            on the projects I worked on closely: logo moderation and the LLM moderator.
+          </p>
+          <p class="card-links">
+            <a href="https://dump-ekb.ru/kak-mozhno-moderirovat-izobrazheniya-podhod-avito" target="_blank" rel="noopener noreferrer">Conference page</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://youtu.be/3gJeusBWu5U?si=b0qNOSI6JeG3rIVz&amp;t=1" target="_blank" rel="noopener noreferrer">Watch the recording</a>
+          </p>
         </article>
       </div>
     </section>

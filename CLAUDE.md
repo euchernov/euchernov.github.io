@@ -9,13 +9,17 @@ https://euchernov.github.io). See https://docs.github.com/en/pages/quickstart
 Plain static site — **no build step, no framework, no Jekyll**. GitHub Pages serves the
 files at the repo root as-is.
 
-- `index.html` — the entire site: a single page with `header`, `hero` (intro + contact
-  chips), `About`, `Experience` (company/project cards), and `footer`.
+- `index.html` — the entire site: a single page with `header` (home button, nav with a
+  Projects dropdown + a mobile hamburger, theme toggle), `hero` (intro + photo + contact
+  chips), `About`, `Experience` (company/project cards), `Education`, `Achievements`, and
+  `footer`.
+- `favicon.svg` — the browser-tab icon (EC monogram), referenced from `index.html`'s `<head>`.
 - `styles.css` — all styling. Theming is driven by CSS custom properties on `:root`, with a
   `[data-theme="dark"]` block overriding them for dark mode. Layout is responsive/mobile-first.
 - `main.js` — small, dependency-free: dark/light theme toggle. On first visit the theme
   follows the OS preference (`prefers-color-scheme`); the user's choice is then persisted in
-  `localStorage`. Also sets the footer year. A tiny inline script in `index.html`'s `<head>`
+  `localStorage`. Also sets the footer year and drives the mobile nav + Projects dropdown
+  (open/close, outside-click, Escape). A tiny inline script in `index.html`'s `<head>`
   applies the theme before first paint to avoid a flash.
 - `.nojekyll` — tells GitHub Pages to skip Jekyll and serve files as-is.
 - `README.md` — short English repo description (also the GitHub repo landing page).
